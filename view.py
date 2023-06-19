@@ -5,8 +5,8 @@ from PyQt5.uic import loadUi
 import os
 import PyQt5
 
-pyqt = os.path.dirname(PyQt5.__file__)
-os.environ['QT_PLUGIN_PATH'] = os.path.join(pyqt, "Qt/plugins")
+pyqt = os.path.dirname(PyQt5.__file__) # Попытка исправить проблему с qt.qpa.plagin
+os.environ['QT_PLUGIN_PATH'] = os.path.join(pyqt, "Qt/plugins") # Попытка исправить проблему с qt.qpa.plagin
 
 import controller
 
