@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>776</width>
+    <height>289</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(54, 54, 54);</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>10</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 20pt; 
+color: rgb(227, 227, 227);</string>
+   </property>
+   <property name="text">
+    <string>Welcome to the airports app!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>50</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 20pt; 
+color: rgb(227, 227, 227);</string>
+   </property>
+   <property name="text">
+    <string>Choose what do you need</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="search_airports_btn">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(227, 227, 227); font-size: 14pt;
+background-color: rgb(113, 113, 113);</string>
+   </property>
+   <property name="text">
+    <string>Search airports by coordinates</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="search_routes_by_cities_btn">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>170</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(227, 227, 227); font-size: 14pt;
+background-color: rgb(113, 113, 113);</string>
+   </property>
+   <property name="text">
+    <string>Search routes between cities</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="search_routes_ct_btn">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>220</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(227, 227, 227); font-size: 14pt;
+background-color: rgb(113, 113, 113);</string>
+   </property>
+   <property name="text">
+    <string>Search routes from/to a city</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1295</width>
+    <height>837</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(54, 54, 54);</string>
+  </property>
+  <widget class="QTableWidget" name="filtred_airports_tb">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>1221</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14pt;
+background-color: rgb(220, 220, 220);
+</string>
+   </property>
+   <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>City</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Country</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Aitport</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Latitude</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Longitude</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
