@@ -2,13 +2,18 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication, QTableWidgetItem
 from PyQt5.uic import loadUi
+import os
+import PyQt5
+
+pyqt = os.path.dirname(PyQt5.__file__)
+os.environ['QT_PLUGIN_PATH'] = os.path.join(pyqt, "Qt/plugins")
+
 import controller
 
 
 class Welcome(QDialog):
     '''
-    Класс, выводящий на экран окно с выбором интересующей функции - поиск по координатам, поиск маршрутов между городами или поиск маршрутов в/из города
-
+    A class that displays a window for selecting the function of interest - search by coordinates, search for routes between cities, or search for routes to/from a city
     '''
     def __init__(self):
         super().__init__()
@@ -37,7 +42,7 @@ class Welcome(QDialog):
 
 class Coordinates_filter(QDialog):
     '''
-    Класс, выводящий на экран окно с вводом координат для поиска аэропортов
+    A class that displays a window with coordinate input to search for airports
     '''
     def __init__(self):
         super().__init__()
@@ -72,7 +77,7 @@ class Coordinates_filter(QDialog):
 
 class Filtred_airports(QDialog):
     '''
-    Класс, выводящий на экран таблицу со списком отфильрованных по координатам аэропортов
+    A class that displays a table with a list of airports filtered by coordinates
     '''
     def __init__(self, min_lat, max_lat, min_lon, max_lon):
         super().__init__()
@@ -97,7 +102,7 @@ class Filtred_airports(QDialog):
 
 class Routes_by_cities_filter(QDialog):
     '''
-    Класс, выводящий на экран поля ввода городов отправления и прибытия
+    A class that displays the input fields for departure and arrival cities
     '''
     def __init__(self):
         super().__init__()
@@ -113,6 +118,9 @@ class Routes_by_cities_filter(QDialog):
 
 
 class Filtred_roures_by_city(QDialog):
+    '''
+    A class that displays a list of airports and planes for two entered cities
+    '''
     def __init__(self, city_from, city_to):
         super().__init__()
         loadUi('UI/filtred_routes_by_cities.ui', self)
@@ -133,7 +141,7 @@ class Filtred_roures_by_city(QDialog):
 
 class Routes_in_from_city(QDialog):
     '''
-    Класс, выводящий на экран поле ввода города
+    A class that displays the city input field
     '''
     def __init__(self):
         super().__init__()
@@ -148,6 +156,9 @@ class Routes_in_from_city(QDialog):
 
 
 class Filtred_routes_in_from_city(QDialog):
+    '''
+    A class that displays a list of airports and planes aviable for entered city
+    '''
     def __init__(self, city):
         super().__init__()
         loadUi('UI/filtred_routes_by_cities.ui', self)

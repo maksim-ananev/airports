@@ -5,6 +5,9 @@ class Controller_airports():
         self.db = DBConnector()
 
     def filtred_airports(self, min_lat, max_lat, min_lon, max_lon):
+        '''
+        Extract from the database city, country, airport, latitude, longitude in according to entered coordinates
+        '''
 
         db_connection = self.db.connect_to_db()
         cursor = db_connection.cursor()
@@ -14,12 +17,18 @@ class Controller_airports():
         return cursor.fetchall()
 
     def filtred_routes_by_cities(self, city_from, city_to):
+        '''
+        Extract from the database departure airports, airports of arrival and airplanes between two entered cities
+        '''
         db_connection = self.db.connect_to_db()
         cursor = db_connection.cursor()
         cursor.execute(f'SELECT src_airport, dst_airport, airplane FROM routes WHERE src_airport in (SELECT iata FROM airports WHERE city = \'{city_from}\') AND dst_airport in (SELECT iata FROM airports WHERE city = \'{city_to}\')')
         return cursor.fetchall()
 
     def filtred_routes_in_to_city(self, city):
+        '''
+        Extract from the database departure airports, airports of arrival and airplanes between entered city and cities, where you can fly from selected city
+        '''
         db_connection = self.db.connect_to_db()
         cursor = db_connection.cursor()
         cursor.execute(
